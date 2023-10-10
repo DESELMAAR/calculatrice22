@@ -1,0 +1,199 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:  'League Spartan', sans-serif;;
+}
+
+:root{
+  --Very-dark-desaturated-blue-main-background: hsl(222, 26%, 31%);
+--Very-dark-desaturated-blue-toggle-background-keypad-background: hsl(223, 31%, 20%);
+--Very-dark-desaturated-blue-screen-background: hsl(224, 36%, 15%);
+
+/* #### Keys */
+
+--Desaturated-dark-blue-background: hsl(225, 21%, 49%);
+--Desaturated-dark-blue-key-shadow :hsl(224, 28%, 35%);
+
+--Red-key-background-toggle: hsl(6, 63%, 50%);
+--Dark-red-key-shadow: hsl(6, 70%, 34%);
+
+--Light-grayish-orange-key-background: hsl(30, 25%, 89%);
+--Grayish-orange-key-shadow: hsl(28, 16%, 65%);
+
+/* #### Text */
+
+--Very-dark-grayish-blue: hsl(221, 14%, 31%);
+--White: hsl(0, 0%, 100%);
+}
+
+
+body{
+  max-width: 1440px;
+  height: 110vh;
+  background-color:var(--Very-dark-desaturated-blue-main-background);
+  display: grid;
+  justify-content: center;
+  place-items: center;
+}
+
+.container{
+  width: 300px;
+height: 350px;
+display: grid;
+grid-template-rows: 10% 15% 75%;
+gap: 0.8em;
+}
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+}
+.top p {
+  color: white;
+}
+
+.output{
+}
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  column-gap: 0.4em;
+  row-gap: 0.7em;
+/* box-shadow: 0 3px  gray; */
+background-color:var(--Light-grayish-orange-key-background);
+padding: 1em;
+border-radius: 4px;
+}
+
+.btndel{
+  grid-area: 1/4;
+}
+.btndel:hover{
+  background-color: rgb(15, 154, 154);
+  color: white;}
+.btnplus{
+  grid-area: 2/4;
+}
+.btnmultiply{
+  grid-area: 4/4;
+}
+.btndivse{
+  grid-area: 4/3;
+}
+.btnequal{
+  grid-area: 5/4;
+}
+.btnequal:hover{
+  background-color: rgb(235, 86, 40);
+  color: white;
+}
+.btnreset{
+  grid-area:5/2 span;
+  /* background-color: var(--); */
+}
+.btnreset:hover{
+  background-color: rgb(15, 154, 154);
+  color: white;
+}
+.btnequal{
+  grid-area:5/2 span;
+
+}
+button{
+  background-color: var(--Light-grayish-orange-key-background);
+font-weight: 600;
+font-size: 19px;
+border: none;
+border-radius: 4px;
+box-shadow: 0 2px 3px var(--Grayish-orange-key-shadow);
+transition: all 0.4s ease-in;
+cursor: pointer;
+}
+button:hover{
+  background-color: white;
+}
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+
+} */
+.input{
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  padding: 0.8em;
+  border: none;
+font-size: 25px;
+font-weight: 600;
+text-align: right;
+background: white;
+display: flex;
+justify-content: flex-end;
+place-items: center;
+}
+.input:focus{
+border: none;
+outline: none;
+}
+
+ul{
+  list-style: none;
+
+}
+ul li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  /* background-color: brown; */
+  cursor: pointer;
+}
+
+.aqua{
+  background-color: aqua;
+}
+.brown{
+  background-color: brown;
+}
+.blue{
+  background-color: blue;
+}
+.them{
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+.them p{
+  font-size: 10px;
+  font-weight: 400;
+letter-spacing: 0.4em;
+text-align:right;
+}
+
+/* then choice */
+.numb{
+  display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap: 0.4em;
+}
+/* them 2  */
+
+.buttons2{
+  background-color: rgb(30, 30, 88);
+}
+.input2{
+  background-color: rgb(3, 3, 31);
+  color: white;
+}
+
+/* them 3 */
+.buttons3{
+  background-color: rgb(68, 5, 128);
+  color: rgb(229, 229, 25);
+}
+.input3{
+  background-color: rgb(4, 24, 79);
+}
